@@ -1,10 +1,10 @@
 import React from 'react'
 import { useSetRecoilState } from 'recoil'
 import {
+  gamePositionsState,
   gameIsActiveState,
-  gameHasInfiniteAttemptsState,
-  gameMaxAttemptsState,
-  gamePositionsState
+  gameMaxShotsNumberState,
+  gameShipsState
 } from '../store/game/atoms'
 import {
   Box,
@@ -19,19 +19,19 @@ import {
   TextField,
   Typography
 } from '@material-ui/core'
-import { getBoardPositions } from '../utils/game'
+import { getPositions, getRandomShips } from '../utils/game'
 
 const levelItems = [
-  { label: 'Easy (infinity)', value: 'infinity' },
+  { label: 'Easy (infinity)', value: '-1' },
   { label: 'Normal (100)', value: '100' },
   { label: 'Hard (50)', value: '50' }
 ]
 
 const Setting = () => {
-  const setGameIsActive = useSetRecoilState(gameIsActiveState)
-  const setGameHasInfiniteAttempts = useSetRecoilState(gameHasInfiniteAttemptsState)
-  const setGameMaxAttempts = useSetRecoilState(gameMaxAttemptsState)
   const setGamePositions = useSetRecoilState(gamePositionsState)
+  const setGameIsActive = useSetRecoilState(gameIsActiveState)
+  const setMaxShotsNumber = useSetRecoilState(gameMaxShotsNumberState)
+  const setGameShips = useSetRecoilState(gameShipsState)
   const [attempts, setAttempts] = React.useState('')
   const [level, setLevel] = React.useState('')
 
@@ -47,14 +47,10 @@ const Setting = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    setGamePositions(getPositions())
     setGameIsActive(true)
-    setGamePositions(getBoardPositions())
-    if (level === 'infinity') {
-      setGameHasInfiniteAttempts(false)
-    } else {
-      setGameHasInfiniteAttempts(true)
-      setGameMaxAttempts(Number(attempts || level))
-    }
+    setGameShips(getRandomShips())
+    setMaxShotsNumber(Number(attempts || level))
   }
   return (
     <Paper>

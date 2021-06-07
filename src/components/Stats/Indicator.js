@@ -5,14 +5,14 @@ const Indicator = ({ text, description }) => {
   return (
     <>
       <Typography
-        variant="h3"
+        variant="h4"
         gutterBottom
         color="secondary"
       >
         {text}
       </Typography>
       <Box mt={-3}>
-        <Typography>{description}</Typography>
+        <Typography variant="caption">{description}</Typography>
       </Box>
     </>
   )

@@ -6,20 +6,19 @@ export const getBoardHeaders = () => ({
   cols: BOARD_COLS
 })
 
-export const getBoardPositions = () => {
-  return boardPositionList().map(position => ({
-    status: '',
+export const getPositions = () => {
+  return getAllPositions().map(position => ({
+    status: 'none',
     position
   }))
 }
 
-export const getRandomShips = () => ship.getRandomShips(boardPositionList())
-
-const boardPositionList = () => {
+export const getAllPositions = () => {
   const allPositions = (total, row) => {
     const positions = BOARD_COLS.map(col => row + col)
     return [...total, ...positions]
   }
-
   return BOARD_ROWS.reduce(allPositions, [])
 }
+
+export const getRandomShips = () => ship.getRandomShips(getAllPositions())

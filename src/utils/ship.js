@@ -1,9 +1,9 @@
-import * as helpers from './helpers'
 import { BOARD_COLS, BOARD_ROWS, SHIPS } from './constants'
+import * as helpers from './helpers'
 
 export const getRandomShips = (boardPositions) => {
   let positions = []
-  const ships = SHIPS.map(({ size }, index) => {
+  return SHIPS.map(({ size }, index) => {
     let position, ship
     let isValid = false
     while (!isValid) {
@@ -20,11 +20,10 @@ export const getRandomShips = (boardPositions) => {
     return {
       ...ship,
       id: index,
+      hits: 0,
       size
     }
   })
-
-  return { ships, positions }
 }
 
 const getShip = (axes, size) => {

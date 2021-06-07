@@ -1,4 +1,5 @@
 import { RecoilRoot } from 'recoil'
+import { SnackbarProvider } from 'notistack'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
@@ -12,15 +13,17 @@ const App = () => {
     <RecoilRoot>
       <ThemeProvider theme={muiTheme}>
         <CssBaseline />
-        <Router>
-          <LayoutMain>
-            <Switch>
-              <Route path="/games" component={pages.Games} />
-              <Route path="/" component={pages.Home} exact />
-              <Route component={pages.NotFound} />
-            </Switch>
-          </LayoutMain>
-        </Router>
+        <SnackbarProvider>
+          <Router>
+            <LayoutMain>
+              <Switch>
+                <Route path="/games" component={pages.Games} />
+                <Route path="/" component={pages.Home} exact />
+                <Route component={pages.NotFound} />
+              </Switch>
+            </LayoutMain>
+          </Router>
+        </SnackbarProvider>
       </ThemeProvider>
     </RecoilRoot>
   )

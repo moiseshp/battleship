@@ -1,12 +1,11 @@
 import { atom } from 'recoil'
-
+const infinity = -1
 const game = {
   isActive: false,
-  hasInfiniteAttempts: true,
-  maxAttempts: 0,
-  attemptsPlayedNumber: 0,
+  maxShotsNumber: infinity,
   positions: [],
-  ships: []
+  ships: [],
+  infinity
 }
 
 export const gameIsActiveState = atom({
@@ -14,19 +13,14 @@ export const gameIsActiveState = atom({
   default: game.isActive
 })
 
-export const gameHasInfiniteAttemptsState = atom({
-  key: 'gameHasInfiniteAttemptsState',
-  default: game.hasInfiniteAttempts
+export const gameMaxShotsNumberState = atom({
+  key: 'gamemaxShotsNumberState',
+  default: game.maxShotsNumber
 })
 
-export const gameMaxAttemptsState = atom({
-  key: 'gameMaxAttemptsState',
-  default: game.maxAttempts
-})
-
-export const gameAttemptsPlayedNumberState = atom({
-  key: 'gameAttemptsPlayedNumberState',
-  default: game.attemptsPlayedNumber
+export const gamePositionsState = atom({
+  key: 'gamePositionsState',
+  default: game.positions
 })
 
 export const gameShipsState = atom({
@@ -34,7 +28,7 @@ export const gameShipsState = atom({
   default: game.ships
 })
 
-export const gamePositionsState = atom({
-  key: 'gamePositionsState',
-  default: game.positions
+export const gameInfinityState = atom({
+  key: 'gameInfinityState',
+  default: game.infinity
 })
