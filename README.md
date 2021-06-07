@@ -1,6 +1,6 @@
 
 ## BATTLESHIPT
-![enter image description here](https://moiseshp.github.io/dummy-logo-maker/dummy-logo.png)
+![enter image description here](https://moiseshp.github.io/dummy-logo-maker/print-battleship.png)
 
 ## Descripción
 Proyecto basado en la versión para un jugador del clásico juego de mesa **BATTLESHIPT**. Son 10 barcos ocultos en ubicaciones aleatorias en una cuadrícula cuadrada. El jugador tendrá algunos movimientos predefinidos para intentar hundir todas las naves. 
@@ -17,12 +17,6 @@ Enter **[battleship](https://moiseshp.github.io/battleship/)** y comienza la div
 El usuario debe ingresar el número de turnos (o intentos) antes de comenzar el juego o también podrá elegir 3 niveles predefinidos para seleccionar: fácil (turnos infinitos), medio (100 turnos), difícil (50 turnos).
 
 El juego termina cuando el jugador hunde todas las naves o cuando utiliza todos sus turnos disponibles.
-
-## Examples
-![enter image description here](https://moiseshp.github.io/dummy-logo-maker/dummy-logo_example-1.png)
-![enter image description here](https://moiseshp.github.io/dummy-logo-maker/dummy-logo_example-2.png)
-![enter image description here](https://moiseshp.github.io/dummy-logo-maker/dummy-logo_example-4.png)
-![enter image description here](https://moiseshp.github.io/dummy-logo-maker/dummy-logo_example-5.png)
 
 ## Features
 
