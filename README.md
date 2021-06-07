@@ -1,6 +1,6 @@
 
 ## BATTLESHIPT
-![enter image description here](https://moiseshp.github.io/dummy-logo-maker/print-battleship.png)
+![enter image description here](https://moiseshp.github.io/battleship/print-battleship.png)
 
 ## Descripción
 Proyecto basado en la versión para un jugador del clásico juego de mesa **BATTLESHIPT**. Son 10 barcos ocultos en ubicaciones aleatorias en una cuadrícula cuadrada. El jugador tendrá algunos movimientos predefinidos para intentar hundir todas las naves. 
@@ -28,8 +28,8 @@ El juego termina cuando el jugador hunde todas las naves o cuando utiliza todos 
 ## TODO
  - Add test.
 
-##  Authors
+##  Autor
 Moisés Huaringa
 
-## License
+## Licencia
 This project is released under the MIT license.
