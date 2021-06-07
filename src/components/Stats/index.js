@@ -1,3 +1,4 @@
+import React from 'react'
 import { useRecoilValue } from 'recoil'
 import { gameStatsSelector } from '../../store/game/selectors'
 import { Box, Paper, Typography } from '@material-ui/core'
@@ -10,6 +11,7 @@ const Stats = () => {
     hits,
     downedShipsNumber
   } = useRecoilValue(gameStatsSelector)
+
   return (
     <Paper>
       <Box p={3}>

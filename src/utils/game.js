@@ -1,5 +1,6 @@
 import { BOARD_COLS, BOARD_ROWS } from './constants'
 import * as ship from './ship'
+import * as helpers from './helpers'
 
 export const getBoardHeaders = () => ({
   rows: BOARD_ROWS,
@@ -19,6 +20,14 @@ export const getAllPositions = () => {
     return [...total, ...positions]
   }
   return BOARD_ROWS.reduce(allPositions, [])
+}
+
+export const createGame = (data) => {
+  return {
+    ...data,
+    id: helpers.getId(),
+    date: new Date()
+  }
 }
 
 export const getRandomShips = () => ship.getRandomShips(getAllPositions())

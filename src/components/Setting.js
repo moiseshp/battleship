@@ -52,6 +52,7 @@ const Setting = () => {
     setGameShips(getRandomShips())
     setMaxShotsNumber(Number(attempts || level))
   }
+
   return (
     <Paper>
       <Box p={3} textAlign="center" maxWidth={400}>

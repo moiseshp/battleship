@@ -1,12 +1,14 @@
 import React from 'react'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { gameIsActiveState, gameShipsState, gamePositionsState } from '../store/game/atoms'
+import { gameIsGameOverSelector } from '../store/game/selectors'
 import { Box } from '@material-ui/core'
 import Board from '../components/Board'
 import BoardCell from '../components/Board/BoardCell'
 import BoardItem from '../components/Board/BoardItem'
 import Stats from '../components/Stats'
 import Setting from '../components/Setting'
+import GameOverDialog from '../components/GameOverDialog'
 import { getBoardHeaders } from '../utils/game'
 import { useSnackbar } from 'notistack'
 
@@ -21,6 +23,7 @@ const Home = () => {
   const gameIsActive = useRecoilValue(gameIsActiveState)
   const [gamePositions, setGamePositions] = useRecoilState(gamePositionsState)
   const [gameShips, setGameShips] = useRecoilState(gameShipsState)
+  const isGameOver = useRecoilValue(gameIsGameOverSelector)
   const { enqueueSnackbar } = useSnackbar()
 
   const handleShot = (shot) => {
@@ -48,6 +51,7 @@ const Home = () => {
 
     setGamePositions(positions)
   }
+
   return (
     <Box display="flex">
       {gameIsActive
@@ -67,6 +71,7 @@ const Home = () => {
             <Box ml={3}>
               <Stats />
             </Box>
+            {isGameOver && <GameOverDialog />}
           </>
         : <Setting />
       }

@@ -5,6 +5,7 @@ const game = {
   maxShotsNumber: infinity,
   positions: [],
   ships: [],
+  games: [],
   infinity
 }
 
@@ -31,4 +32,9 @@ export const gameShipsState = atom({
 export const gameInfinityState = atom({
   key: 'gameInfinityState',
   default: game.infinity
+})
+
+export const gameGamesState = atom({
+  key: 'gameGamesState',
+  default: game.games
 })

@@ -16,11 +16,11 @@ const App = () => {
         <SnackbarProvider>
           <Router>
             <LayoutMain>
-              <Switch>
-                <Route path="/games" component={pages.Games} />
-                <Route path="/" component={pages.Home} exact />
-                <Route component={pages.NotFound} />
-              </Switch>
+                <Switch>
+                  <Route path="/games" component={pages.Games} />
+                  <Route path="/" component={pages.Home} exact />
+                  <Route component={pages.NotFound} />
+                </Switch>
             </LayoutMain>
           </Router>
         </SnackbarProvider>

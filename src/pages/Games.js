@@ -1,3 +1,5 @@
+import { useRecoilValue } from 'recoil'
+import { gameGamesState } from '../store/game/atoms'
 import {
   Box,
   Table,
@@ -9,32 +11,32 @@ import {
   Paper
 } from '@material-ui/core'
 
-const rows = [
-  { downedShips: '6/10', score: 870, date: '2021.05.01 08:23' },
-  { downedShips: '10/10', score: 1000, date: '2021.05.01 10:21' },
-  { downedShips: '3/10', score: 250, date: '2021.05.01 12:23' }
-]
-
 const Games = () => {
+  const games = useRecoilValue(gameGamesState)
+
   return (
     <Box maxWidth={980}>
       <TableContainer component={Paper}>
-        <Table aria-label="simple table">
+        <Table aria-label="games">
           <TableHead>
             <TableRow>
               <TableCell>#</TableCell>
+              <TableCell align="right">Shots allowed</TableCell>
+              <TableCell align="right">Shots played</TableCell>
+              <TableCell align="right">Hits</TableCell>
               <TableCell align="right">Downed ships</TableCell>
-              <TableCell align="right">Score</TableCell>
               <TableCell align="right">Date</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {rows.map((row, index) => (
-              <TableRow key={index}>
+            {games.map((game, index) => (
+              <TableRow key={game.id}>
                 <TableCell component="th" scope="row">{index + 1}</TableCell>
-                <TableCell align="right">{row.downedShips}</TableCell>
-                <TableCell align="right">{row.score}</TableCell>
-                <TableCell align="right">{row.date}</TableCell>
+                <TableCell align="right">{game.maxShotsNumber}</TableCell>
+                <TableCell align="right">{game.numberOfShotsPlayed}</TableCell>
+                <TableCell align="right">{game.hits}</TableCell>
+                <TableCell align="right">{game.downedShipsNumber}</TableCell>
+                <TableCell align="right">{game.date.toLocaleString()}</TableCell>
               </TableRow>
             ))}
           </TableBody>
