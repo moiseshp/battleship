@@ -5,7 +5,7 @@
 ## Descripción
 Proyecto basado en la versión para un jugador del clásico juego de mesa **BATTLESHIP**. Son 10 barcos ocultos en ubicaciones aleatorias en una cuadrícula cuadrada. El jugador tendrá algunos movimientos predefinidos para intentar hundir todas las naves. 
 
-Enter **[battleship](https://moiseshp.github.io/battleship/)** y comienza la diversión.
+Ingresa a **[https://github.com/moiseshp/battleship](https://moiseshp.github.io/battleship/)** y comienza la diversión.
 
 ## Barcos
 - 1 que tiene 4 espacios de largo. 
@@ -21,12 +21,9 @@ El juego termina cuando el jugador hunde todas las naves o cuando utiliza todos 
 ## Features
 
  - [React 17.0.2](https://reactjs.org/docs/getting-started.html)
- - [Recoil](https://recoiljs.org/)
- - [Material UI](https://material-ui.com/)
- - [Notistack](https://github.com/iamhosseindhv/notistack)
-
-## TODO
- - Add test.
+ - [Recoil](https://recoiljs.org/) A state management library for React
+ - [Material UI](https://material-ui.com/) React components for faster and easier web development.
+ - [Notistack](https://github.com/iamhosseindhv/notistack) Is a notification library which makes it extremely easy to display notifications on your web apps
 
 ##  Autor
 Moisés Huaringa
