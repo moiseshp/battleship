@@ -1,9 +1,9 @@
 
-## BATTLESHIPT
+## BATTLESHIP
 ![enter image description here](https://moiseshp.github.io/battleship/print-battleship.png)
 
 ## Descripción
-Proyecto basado en la versión para un jugador del clásico juego de mesa **BATTLESHIPT**. Son 10 barcos ocultos en ubicaciones aleatorias en una cuadrícula cuadrada. El jugador tendrá algunos movimientos predefinidos para intentar hundir todas las naves. 
+Proyecto basado en la versión para un jugador del clásico juego de mesa **BATTLESHIP**. Son 10 barcos ocultos en ubicaciones aleatorias en una cuadrícula cuadrada. El jugador tendrá algunos movimientos predefinidos para intentar hundir todas las naves. 
 
 Enter **[battleship](https://moiseshp.github.io/battleship/)** y comienza la diversión.
 
