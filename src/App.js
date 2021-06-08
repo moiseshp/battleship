@@ -1,7 +1,7 @@
 import { RecoilRoot } from 'recoil'
 import { SnackbarProvider } from 'notistack'
 import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { HashRouter as Router, Switch, Route } from 'react-router-dom'
 import CssBaseline from '@material-ui/core/CssBaseline'
 import LayoutMain from './layouts/Main'
 import theme from './theme'
@@ -14,7 +14,7 @@ const App = () => {
       <ThemeProvider theme={muiTheme}>
         <CssBaseline />
         <SnackbarProvider>
-          <Router basename={process.env.PUBLIC_URL}>
+          <Router>
             <LayoutMain>
               <Switch>
                 <Route path="/games" component={pages.Games} />
