@@ -5,7 +5,7 @@
 ## Descripción
 Proyecto basado en la versión para un jugador del clásico juego de mesa **BATTLESHIP**. Son 10 barcos ocultos en ubicaciones aleatorias en una cuadrícula cuadrada. El jugador tendrá algunos movimientos predefinidos para intentar hundir todas las naves. 
 
-Ingresa a **[https://github.com/moiseshp/battleship](https://moiseshp.github.io/battleship/)** y comienza la diversión.
+Ingresa a **[https://moiseshp.github.io/battleship/](https://moiseshp.github.io/battleship/)** y comienza la diversión.
 
 ## Barcos
 - 1 que tiene 4 espacios de largo. 
