@@ -14,7 +14,7 @@ import {
   DialogContent,
   DialogTitle
 } from '@material-ui/core'
-import ReplayIcon from '@material-ui/icons/Replay'
+import PlayAgainButton from './PlayAgainButton'
 import { createGame } from '../utils/game'
 
 const GameOverDialog = () => {
@@ -49,15 +49,7 @@ const GameOverDialog = () => {
         </Box>
       </DialogTitle>
       <DialogContent>
-        <Button
-          variant="contained"
-          color="secondary"
-          startIcon={<ReplayIcon />}
-          onClick={handleClick}
-          fullWidth
-        >
-          Play again
-        </Button>
+        <PlayAgainButton />
         <Box my={2}>
           <Button
             variant="outlined"

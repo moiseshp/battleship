@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types'
-import { Link, useLocation } from 'react-router-dom'
+import { useHistory, useLocation } from 'react-router-dom'
+import { useSetRecoilState } from 'recoil'
+import { gameIsActiveState } from '../store/game/atoms'
 import { Box, Button, Paper, Typography } from '@material-ui/core'
 import DirectionsBoatIcon from '@material-ui/icons/DirectionsBoat'
 import { useStyles } from './Main.styles'
@@ -11,8 +13,14 @@ const items = [
 
 const Main = ({ children }) => {
   const location = useLocation()
+  const history = useHistory()
+  const setGameIsActive = useSetRecoilState(gameIsActiveState)
   const isCurrentRoute = (route) => route === location.pathname
   const classes = useStyles()
+  const handlePage = (page) => {
+    setGameIsActive(false)
+    history.push(page)
+  }
   return (
     <Box className={classes.wrapper} p={3}>
       <Box className={classes.aside} textAlign="center">
@@ -27,12 +35,11 @@ const Main = ({ children }) => {
             {items.map(item => (
               <Box my={1.5} key={item.name}>
                 <Button
-                  component={Link}
-                  to={item.route}
                   color="default"
                   variant={isCurrentRoute(item.route) ? 'contained' : 'outlined'}
                   size="large"
                   fullWidth
+                  onClick={() => handlePage(item.route)}
                 >
                   {item.name}
                 </Button>

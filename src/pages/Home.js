@@ -9,6 +9,7 @@ import BoardItem from '../components/Board/BoardItem'
 import Stats from '../components/Stats'
 import Setting from '../components/Setting'
 import GameOverDialog from '../components/GameOverDialog'
+import PlayAgainButton from '../components/PlayAgainButton'
 import { getBoardHeaders } from '../utils/game'
 import { useSnackbar } from 'notistack'
 
@@ -69,6 +70,9 @@ const Home = () => {
               </Board>
             </Box>
             <Box ml={3}>
+              <Box mb={2}>
+                <PlayAgainButton />
+              </Box>
               <Stats />
             </Box>
             {isGameOver && <GameOverDialog />}
